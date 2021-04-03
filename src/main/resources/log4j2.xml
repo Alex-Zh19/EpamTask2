@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info">
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{5} - %msg%n"/>
+        </Console>
+
+        <RollingFile name="rollingFile"
+                     fileName="logs/ArrayLog4j2.log"
+                     filePattern="ogs/${date:yyyy-MM-dd}/%d{yyyy-MM-dd_HH-mm}.txt">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{6} - %msg%n"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy
+                        size="10 KB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="10"/>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="console"/>
+            <AppenderRef ref="rollingFile"/>
+        </Root>
+    </Loggers>
+</Configuration>
