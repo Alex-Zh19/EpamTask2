@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+    <element name="Greenhouse">
+        <complexType>
+            <sequence>
+                <element name="plant" type="tns:Plant" minOccures="16" maxOccures="16"/>
+            </sequence>
+        </complexType>
+    </element>
+    <complexType name="Plant">
+        <all>
+            <element name="name" type="tns:Name"/>
+            <element name="soil" type="string"/>
+            <element name="origin" type="string"/>
+            <element name="visualParameters" type="tns:VisualParameters"/>
+            <element name="growingTips" type="tns:GrowingTips"/>
+            <element name="multiplying" type="string"/>
+        </all>
+        <attribute name="identifierName" type="tns:IdentifierName" use="required"/>
+        <attribute name="origin" use="optional" default="Belarus">
+            <simpleType>
+                <restriction base="string">
+                    <enumeration value="Belarus"/>
+                    <enumeration value="Russia"/>
+                    <enumeration value="China"/>
+                    <enumeration value="USA"/>
+                </restriction>
+            </simpleType>
+        </attribute>
+    </complexType>
+    <simpleType name="Name">
+        <restriction base="string">
+            <length value="20"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="IdentifierName">
+        <restriction base="ID">
+            <pattern value="\\w {2,20}"/>
+        </restriction>
+    </simpleType>
+    <complexType name="VisualParameters">
+        <
+    </complexType>
+</schema>

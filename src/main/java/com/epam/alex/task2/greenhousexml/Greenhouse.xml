@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<greenHouse>
+    <plant identifierName="snflwr1" origin="Belarus"><!--1-->
+        <name>Sunflower</name>
+        <soil>unpaved</soil>
+        <visualParameters>
+            <stemColor>green</stemColor>
+            <leavesColor>green</leavesColor>
+            <averageSizeOfPlant>big</averageSizeOfPlant>
+        </visualParameters>
+        <growingTips>
+            <temperature>16</temperature><!--in celsius-->
+            <lightning>yes</lightning><!--yes/no does this flower like light-->
+            <watering>50</watering><!--count of ml per week-->
+        </growingTips>
+        <multiplying>seeds</multiplying><!--cuttings/leaves/seeds-->
+    </plant>
+    <plant identifierName="hcnth1" origin="USA"><!--2-->
+        <name>Hyacinth</name>
+        <soil>podzolic</soil>
+        <visualParameters>
+            <stemColor>green</stemColor>
+            <leavesColor>green</leavesColor>
+            <averageSizeOfPlant>average</averageSizeOfPlant>
+        </visualParameters>
+        <growingTips>
+            <temperature>12</temperature><!--in celsius-->
+            <lightning>no</lightning><!--yes/no does this flower like light-->
+            <watering>45</watering><!--count of ml per week-->
+        </growingTips>
+        <multiplying>cuttings</multiplying><!--cuttings/leaves/seeds-->
+    </plant>
+    <plant identifierName="Astr1" origin="Russia"><!--3-->
+        <name>Aster</name>
+        <soil>sod-podzolic</soil>
+        <visualParameters>
+            <stemColor>yellow</stemColor>
+            <leavesColor>green</leavesColor>
+            <averageSizeOfPlant>small</averageSizeOfPlant>
+        </visualParameters>
+        <growingTips>
+            <temperature>20</temperature><!--in celsius-->
+            <lightning>yes</lightning><!--yes/no does this flower like light-->
+            <watering>23</watering><!--count of ml per week-->
+        </growingTips>
+        <multiplying>seeds</multiplying><!--cuttings/leaves/seeds-->
+    </plant>
+    <plant identifierName="pns1" origin="Belarus"><!--4-->
+        <name>Peonies</name>
+        <soil>unpaved</soil>
+        <visualParameters>
+            <stemColor>green</stemColor>
+            <leavesColor>brown</leavesColor>
+            <averageSizeOfPlant>big</averageSizeOfPlant>
+        </visualParameters>
+        <growingTips>
+            <temperature>24</temperature><!--in celsius-->
+            <lightning>yes</lightning><!--yes/no does this flower like light-->
+            <watering>56</watering><!--count of ml per week-->
+        </growingTips>
+        <multiplying>seeds</multiplying><!--cuttings/leaves/seeds-->
+    </plant>
+    <plant identifierName="rs1" origin="Russia"><!--5-->
+        <name>Rose</name>
+        <soil>unpaved</soil>
+        <visualParameters>
+            <stemColor>brown</stemColor>
+            <leavesColor>green</leavesColor>
+            <averageSizeOfPlant>average</averageSizeOfPlant>
+        </visualParameters>
+        <growingTips>
+            <temperature>17</temperature><!--in celsius-->
+            <lightning>yes</lightning><!--yes/no does this flower like light-->
+            <watering>47</watering><!--count of ml per week-->
+        </growingTips>
+        <multiplying>cuttings</multiplying><!--cuttings/leaves/seeds-->
+    </plant>
+    <plant identifierName="nrcss1" origin="China"><!--6-->
+        <name>Narcissus</name>
+        <soil>sod-podzolic</soil>
+        <visualParameters>
+            <stemColor>red</stemColor>
+            <leavesColor>yellow</leavesColor>
+            <averageSizeOfPlant>small</averageSizeOfPlant>
+        </visualParameters>
+        <growingTips>
+            <temperature>44</temperature><!--in celsius-->
+            <lightning>no</lightning><!--yes/no does this flower like light-->
+            <watering>79</watering><!--count of ml per week-->
+        </growingTips>
+        <multiplying>leaves</multiplying><!--cuttings/leaves/seeds-->
+    </plant>
+    <plant identifierName="tlp1" origin="USA"><!--7-->
+        <name>Tulip</name>
+        <soil>podzolic</soil>
+        <visualParameters>
+            <stemColor>black</stemColor>
+            <leavesColor>brown</leavesColor>
+            <averageSizeOfPlant>big</averageSizeOfPlant>
+        </visualParameters>
+        <growingTips>
+            <temperature>1</temperature><!--in celsius-->
+            <lightning>yes</lightning><!--yes/no does this flower like light-->
+            <watering>50</watering><!--count of ml per week-->
+        </growingTips>
+        <multiplying>cutting</multiplying><!--cuttings/leaves/seeds-->
+    </plant>
+    <plant identifierName="crntn1" origin="Russia"><!--8-->
+        <name>Carnation</name>
+        <soil>unpaved</soil>
+        <visualParameters>
+            <stemColor>green</stemColor>
+            <leavesColor>green</leavesColor>
+            <averageSizeOfPlant>small</averageSizeOfPlant>
+        </visualParameters>
+        <growingTips>
+            <temperature>6</temperature><!--in celsius-->
+            <lightning>no</lightning><!--yes/no does this flower like light-->
+            <watering>150</watering><!--count of ml per week-->
+        </growingTips>
+        <multiplying>seeds</multiplying><!--cuttings/leaves/seeds-->
+    </plant>
+    <plant identifierName="chrsnthm1"><!--9 without origin-->
+        <name>Chrysanthemum</name>
+        <soil>podzolic</soil>
+        <visualParameters>
+            <stemColor>pink</stemColor>
+            <leavesColor>green</leavesColor>
+            <averageSizeOfPlant>big</averageSizeOfPlant>
+        </visualParameters>
+        <growingTips>
+            <temperature>26</temperature><!--in celsius-->
+            <lightning>yes</lightning><!--yes/no does this flower like light-->
+            <watering>104</watering><!--count of ml per week-->
+        </growingTips>
+        <multiplying>cuttings</multiplying><!--cuttings/leaves/seeds-->
+    </plant>
+    <plant identifierName="lls1" origin="USA"><!--10-->
+        <name>Lilies</name>
+        <soil>unpaved</soil>
+        <visualParameters>
+            <stemColor>green</stemColor>
+            <leavesColor>blue</leavesColor>
+            <averageSizeOfPlant>average</averageSizeOfPlant>
+        </visualParameters>
+        <growingTips>
+            <temperature>21</temperature><!--in celsius-->
+            <lightning>yes</lightning><!--yes/no does this flower like light-->
+            <watering>107</watering><!--count of ml per week-->
+        </growingTips>
+        <multiplying>leaves</multiplying><!--cuttings/leaves/seeds-->
+    </plant>
+    <plant identifierName="frs1" origin="China"><!--11-->
+        <name>Freesias</name>
+        <soil>unpaved</soil>
+        <visualParameters>
+            <stemColor>green</stemColor>
+            <leavesColor>green</leavesColor>
+            <averageSizeOfPlant>big</averageSizeOfPlant>
+        </visualParameters>
+        <growingTips>
+            <temperature>14</temperature><!--in celsius-->
+            <lightning>yes</lightning><!--yes/no does this flower like light-->
+            <watering>45</watering><!--count of ml per week-->
+        </growingTips>
+        <multiplying>cuttings</multiplying><!--cuttings/leaves/seeds-->
+    </plant>
+    <plant identifierName="hthr1" origin="Belarus"><!--12-->
+        <name>Heather</name>
+        <soil>unpaved</soil>
+        <visualParameters>
+            <stemColor>green</stemColor>
+            <leavesColor>purple</leavesColor>
+            <averageSizeOfPlant>small</averageSizeOfPlant>
+        </visualParameters>
+        <growingTips>
+            <temperature>21</temperature><!--in celsius-->
+            <lightning>yes</lightning><!--yes/no does this flower like light-->
+            <watering>76</watering><!--count of ml per week-->
+        </growingTips>
+        <multiplying>seeds</multiplying><!--cuttings/leaves/seeds-->
+    </plant>
+    <plant identifierName="eclpt1" origin="USA"><!--13-->
+        <name>Eucalyptus</name>
+        <soil>unpaved</soil>
+        <visualParameters>
+            <stemColor>orange</stemColor>
+            <leavesColor>green</leavesColor>
+            <averageSizeOfPlant>big</averageSizeOfPlant>
+        </visualParameters>
+        <growingTips>
+            <temperature>13</temperature><!--in celsius-->
+            <lightning>yes</lightning><!--yes/no does this flower like light-->
+            <watering>72</watering><!--count of ml per week-->
+        </growingTips>
+        <multiplying>leaves</multiplying><!--cuttings/leaves/seeds-->
+    </plant>
+    <plant identifierName="pstch1" origin="Russia"><!--14-->
+        <name>Pistachios</name>
+        <soil>sod-podzolic</soil>
+        <visualParameters>
+            <stemColor>green</stemColor>
+            <leavesColor>green</leavesColor>
+            <averageSizeOfPlant>big</averageSizeOfPlant>
+        </visualParameters>
+        <growingTips>
+            <temperature>9</temperature><!--in celsius-->
+            <lightning>no</lightning><!--yes/no does this flower like light-->
+            <watering>54</watering><!--count of ml per week-->
+        </growingTips>
+        <multiplying>seeds</multiplying><!--cuttings/leaves/seeds-->
+    </plant>
+    <plant identifierName="rsmr1" origin="China"><!--15-->
+        <name>Rosemary</name>
+        <soil>podzolic</soil>
+        <visualParameters>
+            <stemColor>green</stemColor>
+            <leavesColor>green</leavesColor>
+            <averageSizeOfPlant>small</averageSizeOfPlant>
+        </visualParameters>
+        <growingTips>
+            <temperature>7</temperature><!--in celsius-->
+            <lightning>no</lightning><!--yes/no does this flower like light-->
+            <watering>74</watering><!--count of ml per week-->
+        </growingTips>
+        <multiplying>cuttings</multiplying><!--cuttings/leaves/seeds-->
+    </plant>
+    <plant identifierName="lvndr1" origin="Belarus"><!--16-->
+        <name>Lavender</name>
+        <soil>unpaved</soil>
+        <visualParameters>
+            <stemColor>blue</stemColor>
+            <leavesColor>blue</leavesColor>
+            <averageSizeOfPlant>small</averageSizeOfPlant>
+        </visualParameters>
+        <growingTips>
+            <temperature>16</temperature><!--in celsius-->
+            <lightning>yes</lightning><!--yes/no does this flower like light-->
+            <watering>103</watering><!--count of ml per week-->
+        </growingTips>
+        <multiplying>seeds</multiplying><!--cuttings/leaves/seeds-->
+    </plant>
+
+</greenHouse>
