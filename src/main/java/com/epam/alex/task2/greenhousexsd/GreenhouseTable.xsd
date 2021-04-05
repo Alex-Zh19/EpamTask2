@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema">
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="https://github.com/Alex-Zh19/EpamTask2"
+        xmlns:tns="https://github.com/Alex-Zh19/EpamTask2"
+        elementFormDefault="qualified">
     <element name="Greenhouse">
         <complexType>
             <sequence>
-                <element name="plant" type="tns:Plant" minOccures="16" maxOccures="16"/>
+                <element name="plant" type="tns:Plant" minOccurs="16" maxOccurs="unbounded"/>
             </sequence>
         </complexType>
     </element>
+
     <complexType name="Plant">
         <all>
             <element name="name" type="tns:Name"/>
@@ -28,17 +32,33 @@
             </simpleType>
         </attribute>
     </complexType>
+
     <simpleType name="Name">
         <restriction base="string">
-            <length value="20"/>
+            <minLength value="2"/>
+            <maxLength value="20"/>
         </restriction>
     </simpleType>
+
     <simpleType name="IdentifierName">
         <restriction base="ID">
             <pattern value="\\w {2,20}"/>
         </restriction>
     </simpleType>
+
     <complexType name="VisualParameters">
-        <
+        <all>
+            <element name="stemColor" type="string"/>
+            <element name="leavesColor" type="string"/>
+            <element name="averageSizeOfPlant" type="string"/>
+        </all>
+    </complexType>
+
+    <complexType name="GrowingTips">
+        <all>
+            <element name="temperature" type="int"/>
+            <element name="lightning" type="string"/>
+            <element name="watering" type="positiveInteger"/>
+        </all>
     </complexType>
 </schema>
