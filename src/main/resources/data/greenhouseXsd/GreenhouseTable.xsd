@@ -3,7 +3,7 @@
         targetNamespace="https://github.com/Alex-Zh19/EpamTask2"
         xmlns:tns="https://github.com/Alex-Zh19/EpamTask2"
         elementFormDefault="qualified">
-    <element name="Greenhouse">
+    <element name="Flower" abstract="true">
         <complexType>
             <sequence>
                 <element name="plant" type="tns:Plant" minOccurs="16" maxOccurs="unbounded"/>
@@ -13,15 +13,14 @@
 
     <complexType name="Plant">
         <all>
-            <element name="name" type="tns:Name"/>
-            <element name="soil" type="string"/>
-            <element name="origin" type="string"/>
-            <element name="visualParameters" type="tns:VisualParameters"/>
-            <element name="plantingTime" type="tns:PlantingTime"/>
-            <element name="growingTips" type="tns:GrowingTips"/>
-            <element name="multiplying" type="string"/>
+            <element name="Name" type="tns:Name-tns"/>
+            <element name="Soil" type="string"/>
+            <element name="VisualParameters" type="tns:VisualParameters-tns"/>
+            <element name="PlantingTime" type="tns:PlantingTime-tns"/>
+            <element name="GrowingTips" type="tns:GrowingTips-tns"/>
+            <element name="Multiplying" type="string"/>
         </all>
-        <attribute name="identifierName" type="tns:IdentifierName" use="required"/>
+        <attribute name="identifierName" type="tns:IdentifierName-tns" use="required"/>
         <attribute name="origin" use="optional" default="Belarus">
             <simpleType>
                 <restriction base="string">
@@ -34,24 +33,24 @@
         </attribute>
     </complexType>
 
-    <simpleType name="PlantingTime">
+    <simpleType name="PlantingTime-tns">
         <restriction base="dateTime"/>
     </simpleType>
 
-    <simpleType name="Name">
+    <simpleType name="Name-tns">
         <restriction base="string">
             <minLength value="2"/>
             <maxLength value="20"/>
         </restriction>
     </simpleType>
 
-    <simpleType name="IdentifierName">
+    <simpleType name="IdentifierName-tns">
         <restriction base="ID">
             <pattern value="\\w {2,20}"/>
         </restriction>
     </simpleType>
 
-    <complexType name="VisualParameters">
+    <complexType name="VisualParameters-tns">
         <all>
             <element name="stemColor" type="string"/>
             <element name="leavesColor" type="string"/>
@@ -59,11 +58,12 @@
         </all>
     </complexType>
 
-    <complexType name="GrowingTips">
+    <complexType name="GrowingTips-tns">
         <all>
             <element name="temperature" type="int"/>
             <element name="lightning" type="string"/>
             <element name="watering" type="positiveInteger"/>
         </all>
     </complexType>
+    <element name="plant" type="tns:Plant" substitutionGroup="tns:Flower"/>
 </schema>

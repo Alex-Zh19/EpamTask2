@@ -1,0 +1,146 @@
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - lightning 
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - yes
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - lightning
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+            
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - watering 
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 72
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - watering
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+        
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - growingTips
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+        
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - multiplying 
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - leaves
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - multiplying
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+    
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - plant
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+
+    
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - plant  identifierName=pstch1 origin=Russia
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+        
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - name 
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - Pistachios
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - name
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+        
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - soil 
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - sod-podzolic
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - soil
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+        
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - visualParameters 
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+            
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - stemColor 
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - green
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - stemColor
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+            
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - leavesColor 
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - green
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - leavesColor
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+            
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - averageSizeOfPlant 
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - big
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - averageSizeOfPlant
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+            
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - plantingTime 
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - september 1
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - plantingTime
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+        
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - visualParameters
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+        
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - growingTips 
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+            
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - temperature 
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 9
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - temperature
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+            
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - lightning 
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - no
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - lightning
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+            
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - watering 
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 54
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - watering
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+        
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - growingTips
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+        
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - multiplying 
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - seeds
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - multiplying
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+    
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - plant
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+
+    
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - plant  identifierName=rsmr1 origin=China
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+        
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - name 
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - Rosemary
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - name
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+        
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - soil 
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - podzolic
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - soil
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+        
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - visualParameters 
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+            
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - stemColor 
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - green
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - stemColor
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+            
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - leavesColor 
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - green
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - leavesColor
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+            
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - averageSizeOfPlant 
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - small
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - averageSizeOfPlant
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+            
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - plantingTime 
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - september 1
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - plantingTime
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+        
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - visualParameters
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+        
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - growingTips 
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+            
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - temperature 
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 7
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - temperature
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+            
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - lightning 
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - no
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - lightning
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 
+            
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - watering 
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - 74
+2021-04-06 23:05:58 [main] INFO  com.epam.alex.task2.plantHandler.PlantHandler - watering

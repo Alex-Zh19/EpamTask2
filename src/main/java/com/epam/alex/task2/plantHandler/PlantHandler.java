@@ -10,27 +10,26 @@ public class PlantHandler extends DefaultHandler {
     Logger logger= LogManager.getLogger();
     @Override
     public void startDocument(){
-        logger.log(Level.INFO,"Parsing start");
+        System.out.println("start");
     }
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attrs) {
-        String tagData = qName + " ";
+        String tagData = qName + " \"startElFunc\" ";
         for (int i = 0; i < attrs.getLength(); i++) {
             tagData += " " + attrs.getQName(i) + "=" + attrs.getValue(i);
         }
-        logger.log(Level.INFO,tagData);
+        System.out.println(tagData);
     }
     @Override
     public void characters(char[] ch, int start, int length) {
         String str=new String(ch, start, length);
-        logger.log(Level.INFO,str);
+        System.out.println(str+" \"CharactersFunc\" ");
     }
     @Override
     public void endElement(String uri, String localName, String qName) {
-        logger.log(Level.INFO,qName);
-    }
+        System.out.println(qName+" \"endElFunc\" ");    }
     @Override
     public void endDocument() {
-        logger.log(Level.INFO,"\nParsing ended");
+        System.out.println("end");
     }
 }

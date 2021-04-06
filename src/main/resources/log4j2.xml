@@ -6,11 +6,12 @@
         </Console>
 -->
         <RollingFile name="rollingFile"
-                     fileName="allLogs/PlantParsingLog4j2.log"
-                     filePattern="allLogs/logs/${date:yyyy-MM-dd}/%d{yyyy-MM-dd_HH-mm}.txt">
+                     fileName="AllLogs/PlantParsingLog4j2.log"
+                     filePattern="AllLogs/logs/${date:yyyy-MM-dd}/%d{yyyy-MM-dd_HH-mm}.txt">
             <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{6} - %msg%n"/>
             <Policies>
-                <SizeBasedTriggeringPolicy size="10 KB"/>
+                <SizeBasedTriggeringPolicy
+                        size="10 KB"/>
             </Policies>
             <DefaultRolloverStrategy max="10"/>
         </RollingFile>
