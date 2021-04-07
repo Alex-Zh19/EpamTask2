@@ -18,5 +18,5 @@ public abstract class AbstractPlantBuilder {
         return new HashSet<>(plantEntitySet);
     }
 
-    public abstract void BuildPlant(String filePath) throws PlantException;
+    public abstract void buildPlant(String filePath) throws PlantException;
 }

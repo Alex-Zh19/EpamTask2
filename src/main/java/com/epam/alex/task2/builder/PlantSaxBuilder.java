@@ -30,7 +30,7 @@ public class PlantSaxBuilder extends AbstractPlantBuilder {
     }
 
     @Override
-    public void BuildPlant(String filename) throws PlantException {
+    public void buildPlant(String filename) throws PlantException {
         try {
             xmlReader.parse(filename);
         } catch (IOException | SAXException e) {
