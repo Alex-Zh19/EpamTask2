@@ -12,16 +12,16 @@
     </element>
 
     <complexType name="Plant">
-        <all>
+        <sequence>
             <element name="Name" type="tns:Name-tns"/>
             <element name="Soil" type="string"/>
+            <element name="PlantingTime" type="dateTime"/>
             <element name="VisualParameters" type="tns:VisualParameters-tns"/>
-            <element name="PlantingTime" type="tns:PlantingTime-tns"/>
             <element name="GrowingTips" type="tns:GrowingTips-tns"/>
             <element name="Multiplying" type="string"/>
-        </all>
+        </sequence>
         <attribute name="identifierName" type="tns:IdentifierName-tns" use="required"/>
-        <attribute name="origin" use="optional" default="Belarus">
+        <attribute name="origin" use="optional" default="DEFAULT">
             <simpleType>
                 <restriction base="string">
                     <enumeration value="Belarus"/>
@@ -33,9 +33,6 @@
         </attribute>
     </complexType>
 
-    <simpleType name="PlantingTime-tns">
-        <restriction base="dateTime"/>
-    </simpleType>
 
     <simpleType name="Name-tns">
         <restriction base="string">

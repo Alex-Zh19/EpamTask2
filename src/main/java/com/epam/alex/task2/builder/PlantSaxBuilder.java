@@ -1,6 +1,6 @@
 package com.epam.alex.task2.builder;
 
-import com.epam.alex.task2.plantEntity.PlantEntity;
+import com.epam.alex.task2.exception.PlantException;
 import com.epam.alex.task2.plantHandler.PlantErrorHandler;
 import com.epam.alex.task2.plantHandler.PlantHandler;
 import org.xml.sax.SAXException;
@@ -10,33 +10,32 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.IOException;
-import java.util.Set;
 
-public class PlantSaxBuilder {
-    private Set<PlantEntity> students;
-    private PlantHandler handler = new PlantHandler();
-    private XMLReader reader;
-    public PlantSaxBuilder() {
-        // reader configuration
+public class PlantSaxBuilder extends AbstractPlantBuilder {
+
+    private PlantHandler plantHandler;
+    private XMLReader xmlReader;
+
+    public PlantSaxBuilder() throws PlantException {
+        plantHandler = new PlantHandler();
         SAXParserFactory factory = SAXParserFactory.newInstance();
         try {
             SAXParser saxParser = factory.newSAXParser();
-            reader = saxParser.getXMLReader();
+            xmlReader = saxParser.getXMLReader();
         } catch (ParserConfigurationException | SAXException e) {
-            e.printStackTrace(); // log
+            throw new PlantException("Parse configuration Error", e);
         }
-        reader.setErrorHandler(new PlantErrorHandler());
-        reader.setContentHandler(handler);
+        xmlReader.setErrorHandler(new PlantErrorHandler());
+        xmlReader.setContentHandler(plantHandler);
     }
-    public Set<PlantEntity> getStudents() {
-        return students;
-    }
-    public void buildSetStudents(String filename) {
+
+    @Override
+    public void BuildPlant(String filename) throws PlantException {
         try {
-            reader.parse(filename);
+            xmlReader.parse(filename);
         } catch (IOException | SAXException e) {
-            e.printStackTrace(); // log
+            throw new PlantException("SAX parsing error", e);
         }
-       // students = handler.();
+        plantEntitySet = plantHandler.getPlants();
     }
 }

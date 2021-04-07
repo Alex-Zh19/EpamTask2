@@ -1,5 +1,6 @@
-package com.epam.alex.task2.xmlValidator;
+package com.epam.alex.task2.validator;
 
+import com.epam.alex.task2.exception.PlantException;
 import com.epam.alex.task2.plantHandler.PlantErrorHandler;
 import org.xml.sax.SAXException;
 
@@ -13,7 +14,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class XmlValidator {
-    public static boolean validateXml(String xmlFilepath, String xsdSchemaFilepath) {
+    public static boolean validateXml(String xmlFilepath, String xsdSchemaFilepath) throws PlantException {
         String language = XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI;
         SchemaFactory factory = SchemaFactory.newInstance(language);
         File schemaLocation = new File(xsdSchemaFilepath);
@@ -28,8 +29,7 @@ public class XmlValidator {
             validator.validate(source);
             return true;
         } catch (SAXException | IOException e) {
-            System.err.println(xmlFilepath + " is not correct or valid");
-            return false;
+            throw new PlantException("File is not valid :"+xmlFilepath+" ; schema :"+xsdSchemaFilepath,e);
         }
     }
 }
