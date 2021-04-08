@@ -3,7 +3,7 @@
             xmlns="https://github.com/Alex-Zh19/EpamTask2"
             targetNamespace="https://github.com/Alex-Zh19/EpamTask2"
             elementFormDefault="qualified">
-    <xs:element name="Flower">
+    <xs:element name="flower" abstract="true">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="plant" type="Plant" minOccurs="16" maxOccurs="unbounded"/>
@@ -62,4 +62,5 @@
             <xs:element name="watering" type="xs:positiveInteger"/>
         </xs:sequence>
     </xs:complexType>
+    <xs:element name="plant" substitutionGroup="flower"/>
 </xs:schema>
