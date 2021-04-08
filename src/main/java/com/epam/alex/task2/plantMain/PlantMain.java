@@ -1,10 +1,9 @@
 package com.epam.alex.task2.plantMain;
 
 
-import com.epam.alex.task2.entity.PlantEntity;
-import com.epam.alex.task2.entity.PlantOrigin;
-import com.epam.alex.task2.plantHandler.PlantErrorHandler;
-import com.epam.alex.task2.plantHandler.PlantHandler;
+import com.epam.alex.task2.handler.PlantErrorHandler;
+import com.epam.alex.task2.handler.PlantHandler;
+import com.epam.alex.task2.tags.Tags;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 
@@ -19,8 +18,8 @@ public class PlantMain {
     final static String PATH_TO_FILE = "data/greenhouseXml/Greenhouse.xml";
 
     public static void main(String[] args) {
-        try {
 
+        /*try {
             ClassLoader classLoader = ClassLoader.getSystemClassLoader();
 
             URL pathToFileUrl = classLoader.getResource(PATH_TO_FILE);
@@ -36,6 +35,6 @@ public class PlantMain {
 
         } catch (SAXException | IOException | ParserConfigurationException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 }

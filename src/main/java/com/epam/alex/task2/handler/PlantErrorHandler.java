@@ -1,4 +1,4 @@
-package com.epam.alex.task2.plantHandler;
+package com.epam.alex.task2.handler;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

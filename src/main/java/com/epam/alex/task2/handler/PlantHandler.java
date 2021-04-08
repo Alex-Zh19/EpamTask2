@@ -1,4 +1,4 @@
-package com.epam.alex.task2.plantHandler;
+package com.epam.alex.task2.handler;
 
 import com.epam.alex.task2.entity.GrowingTips;
 import com.epam.alex.task2.entity.PlantEntity;

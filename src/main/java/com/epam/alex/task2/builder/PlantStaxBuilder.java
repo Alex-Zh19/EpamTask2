@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
-public class PlantStaxBuilder {
+public class PlantStaxBuilder extends AbstractPlantBuilder {
     private Set<PlantEntity> plantEntitySet;
     private XMLInputFactory inputFactory;
 
@@ -26,6 +26,11 @@ public class PlantStaxBuilder {
 
     public Set<PlantEntity> getPlants() {
         return plantEntitySet;
+    }
+
+    @Override
+    public void buildPlant(String filePath) throws PlantException {
+
     }
 
     public void buildSetPlants(String filename) throws PlantException {
@@ -39,8 +44,8 @@ public class PlantStaxBuilder {
                 if (type == XMLStreamConstants.START_ELEMENT) {
                     name = reader.getLocalName();
                     if (name.equals(Tags.NAME.toLowerCase())) {
-                        //PlantEntity plantEntity = buildStudent(reader);
-                        //students.add(plantEntity);
+                       // PlantEntity plantEntity = buildStudent(reader);
+                        //plantEntitySet.add(plantEntity);
                     }
                 }
             }

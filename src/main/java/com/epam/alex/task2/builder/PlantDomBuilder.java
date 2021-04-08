@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
-public class PlantDomBuilder {
+public class PlantDomBuilder extends AbstractPlantBuilder {
     private Set<PlantEntity> plantEntitySet;
     private DocumentBuilder docBuilder;
 
@@ -33,19 +33,21 @@ public class PlantDomBuilder {
         return plantEntitySet;
     }
 
-    public void buildSetPlants(String filename) throws PlantException {
+    @Override
+    public void buildPlant(String filePath) throws PlantException {
         Document doc;
         try {
-            doc = docBuilder.parse(filename);
+            doc = docBuilder.parse(filePath);
             Element root = doc.getDocumentElement();
             NodeList plantList = root.getElementsByTagName("flower");
             for (int i = 0; i < plantList.getLength(); i++) {
                 Element plantElement = (Element) plantList.item(i);
-                //PlantEntity plantEntity = buildStudent(studentElement);
+                //PlantEntity plantEntity = buildStudent(plantElement);
                 //plantEntitySet.add(plantEntity);
             }
         } catch (IOException | SAXException e) {
             throw new PlantException("Dom Parsing exception", e);
         }
     }
+
 }
