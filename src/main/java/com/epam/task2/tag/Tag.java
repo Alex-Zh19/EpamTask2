@@ -1,6 +1,6 @@
-package com.epam.alex.task2.tags;
+package com.epam.task2.tag;
 
-public class Tags {
+public class Tag {
     public static final String PLANT = "plant";
     public static final String NAME = "name";
     public static final String SOIL = "soil";

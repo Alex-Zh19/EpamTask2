@@ -1,7 +1,7 @@
-package com.epam.alex.task2.validator;
+package com.epam.task2.validator;
 
-import com.epam.alex.task2.exception.PlantException;
-import com.epam.alex.task2.handler.PlantErrorHandler;
+import com.epam.task2.exception.PlantException;
+import com.epam.task2.handler.PlantErrorHandler;
 import org.xml.sax.SAXException;
 
 import javax.xml.XMLConstants;

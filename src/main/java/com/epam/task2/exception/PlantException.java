@@ -1,4 +1,4 @@
-package com.epam.alex.task2.exception;
+package com.epam.task2.exception;
 
 public class PlantException extends Exception {
     public PlantException() {

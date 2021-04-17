@@ -1,8 +1,8 @@
-package com.epam.alex.task2.builder;
+package com.epam.task2.builder;
 
-import com.epam.alex.task2.exception.PlantException;
-import com.epam.alex.task2.handler.PlantErrorHandler;
-import com.epam.alex.task2.handler.PlantHandler;
+import com.epam.task2.exception.PlantException;
+import com.epam.task2.handler.PlantErrorHandler;
+import com.epam.task2.handler.PlantHandler;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 

@@ -1,11 +1,11 @@
-package com.epam.alex.task2.handler;
+package com.epam.task2.handler;
 
-import com.epam.alex.task2.entity.GrowingTips;
-import com.epam.alex.task2.entity.PlantEntity;
-import com.epam.alex.task2.entity.PlantOrigin;
-import com.epam.alex.task2.entity.VisualParameter;
-import com.epam.alex.task2.tags.Tags;
-import com.epam.alex.task2.validator.AttributesValidator;
+import com.epam.task2.entity.GrowingTips;
+import com.epam.task2.entity.PlantEntity;
+import com.epam.task2.entity.PlantOrigin;
+import com.epam.task2.entity.VisualParameter;
+import com.epam.task2.tag.Tag;
+import com.epam.task2.validator.AttributesValidator;
 import org.xml.sax.Attributes;
 import org.xml.sax.helpers.DefaultHandler;
 
@@ -31,7 +31,7 @@ public class PlantHandler extends DefaultHandler {
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attrs) {
         switch (qName) {
-            case Tags.PLANT:
+            case Tag.PLANT:
                 plantEntity = new PlantEntity();
                 if (attrs.getLength() == 2) {
                     if (AttributesValidator.isId(attrs.getValue(0))) {
@@ -47,10 +47,10 @@ public class PlantHandler extends DefaultHandler {
                     plantEntity.setId(attrs.getValue(0));
                 }
                 break;
-            case Tags.VISUAL_PARAMETERS:
+            case Tag.VISUAL_PARAMETERS:
                 visualParameter=new VisualParameter();
                 break;
-            case Tags.GROWING_TIPS:
+            case Tag.GROWING_TIPS:
                 growingTips=new GrowingTips();
                 break;
         }
@@ -65,47 +65,47 @@ public class PlantHandler extends DefaultHandler {
     @Override
     public void endElement(String uri, String localName, String qName) {
         switch (qName) {
-            case  Tags.PLANT:
+            case  Tag.PLANT:
                 plantEntitySet.add(plantEntity);
                 break;
-            case Tags.NAME:
+            case Tag.NAME:
                 plantEntity.setName(element.toString());
                 break;
-            case Tags.SOIL:
+            case Tag.SOIL:
                 plantEntity.setSoil(element.toString());
                 break;
-            case Tags.PLANTING_TIME:
+            case Tag.PLANTING_TIME:
                 String str=element.toString();
                 LocalDateTime dateTime=LocalDateTime.parse(str);
                 plantEntity.setPlantingTime(dateTime);
                 break;
-            case Tags.STEM_COLOR:
+            case Tag.STEM_COLOR:
                 visualParameter.setStemColor(element.toString());
                 break;
-            case Tags.LEAVES_COLOR:
+            case Tag.LEAVES_COLOR:
                 visualParameter.setLeavesColor(element.toString());
                 break;
-            case Tags.AVERAGE_SIZE_OF_PLANT:
+            case Tag.AVERAGE_SIZE_OF_PLANT:
                 visualParameter.setAverageSizeOfPlant(element.toString());
                 break;
-            case Tags.VISUAL_PARAMETERS:
+            case Tag.VISUAL_PARAMETERS:
                 plantEntity.setVisualParameter(visualParameter);
                 break;
-            case Tags.TEMPERATURE:
+            case Tag.TEMPERATURE:
                 Integer temp=Integer.parseInt(element.toString());
                 growingTips.setTemperature(temp.intValue());
                 break;
-            case Tags.LIGHTNING:
+            case Tag.LIGHTNING:
                 growingTips.setLightning(element.toString());
                 break;
-            case Tags.WATERING:
+            case Tag.WATERING:
                 Integer wat=Integer.parseInt(element.toString());
                 growingTips.setWatering(wat.intValue());
                 break;
-            case Tags.GROWING_TIPS:
+            case Tag.GROWING_TIPS:
                 plantEntity.setGrowingTips(growingTips);
                 break;
-            case Tags.MULTIPLYING:
+            case Tag.MULTIPLYING:
                 plantEntity.setMultiplying(element.toString());
         }
     }

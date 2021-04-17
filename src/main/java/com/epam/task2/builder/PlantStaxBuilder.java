@@ -1,8 +1,8 @@
-package com.epam.alex.task2.builder;
+package com.epam.task2.builder;
 
-import com.epam.alex.task2.entity.PlantEntity;
-import com.epam.alex.task2.exception.PlantException;
-import com.epam.alex.task2.tags.Tags;
+import com.epam.task2.entity.PlantEntity;
+import com.epam.task2.exception.PlantException;
+import com.epam.task2.tag.Tag;
 
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
@@ -43,7 +43,7 @@ public class PlantStaxBuilder extends AbstractPlantBuilder {
                 int type = reader.next();
                 if (type == XMLStreamConstants.START_ELEMENT) {
                     name = reader.getLocalName();
-                    if (name.equals(Tags.NAME.toLowerCase())) {
+                    if (name.equals(Tag.NAME.toLowerCase())) {
                        // PlantEntity plantEntity = buildStudent(reader);
                         //plantEntitySet.add(plantEntity);
                     }

@@ -1,4 +1,4 @@
-package com.epam.alex.task2.entity;
+package com.epam.task2.entity;
 
 public enum PlantOrigin {
     BELARUS,

@@ -1,11 +1,11 @@
-package com.epam.alex.task2.validator;
+package com.epam.task2.validator;
 
 
-import com.epam.alex.task2.entity.PlantOrigin;
+import com.epam.task2.entity.PlantOrigin;
 
 
 
-public class AttributesValidator {
+public class AttributesValidator {//peredelat'
     public static boolean isId(String str) {
         String strUp = str.toUpperCase();
         String strLow=str.toLowerCase();
