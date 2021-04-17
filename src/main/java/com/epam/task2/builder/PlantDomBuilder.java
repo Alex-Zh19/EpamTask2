@@ -36,7 +36,7 @@ public class PlantDomBuilder extends AbstractPlantBuilder {
     }
 
     public Set<PlantEntity> getPlants() {
-        return plantEntitySet;
+        return new HashSet<>(plantEntitySet);
     }
 
     @Override
@@ -48,14 +48,14 @@ public class PlantDomBuilder extends AbstractPlantBuilder {
             NodeList plantList = root.getElementsByTagName("flower");
             for (int i = 0; i < plantList.getLength(); i++) {
                 Element plantElement = (Element) plantList.item(i);
-                PlantEntity plantEntity = buildPlant(plantElement);
+                PlantEntity plantEntity = buildPlantEntity(plantElement);
                 plantEntitySet.add(plantEntity);
             }
         } catch (IOException | SAXException e) {
             throw new PlantException("Dom Parsing exception", e);
         }
     }
-    private PlantEntity buildPlant(Element plantElement) {
+    private PlantEntity buildPlantEntity(Element plantElement) {
         PlantEntity plantEntity = new PlantEntity();
         // add null check
         plantEntity.setId(plantElement.getAttribute("identifierName"));
