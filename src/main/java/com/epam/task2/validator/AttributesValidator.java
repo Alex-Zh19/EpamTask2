@@ -9,9 +9,9 @@ import java.util.stream.Collectors;
 
 public class AttributesValidator {
     public static boolean isId(String str) {
-        String strLow=str.toLowerCase();
-        List<String> origin= Arrays.stream(PlantOrigin.values()).map(PlantOrigin::toString).collect(Collectors.toList());
-        for(String plantOrigin:origin){
+        String strLow = str.toLowerCase();
+        List<String> origin = Arrays.stream(PlantOrigin.values()).map(PlantOrigin::toString).collect(Collectors.toList());
+        for (String plantOrigin : origin) {
             if (strLow.equals(plantOrigin)) {
                 return false;
             }

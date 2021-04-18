@@ -28,9 +28,6 @@ public class PlantStaxBuilder extends AbstractPlantBuilder {
         plantEntitySet = new HashSet<PlantEntity>();
     }
 
-    public Set<PlantEntity> getPlants() {
-        return new HashSet<>(plantEntitySet);
-    }
 
     @Override
     public void buildPlant(String filename) throws PlantException {

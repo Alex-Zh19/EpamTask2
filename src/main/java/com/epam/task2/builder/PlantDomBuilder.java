@@ -35,9 +35,7 @@ public class PlantDomBuilder extends AbstractPlantBuilder {
         }
     }
 
-    public Set<PlantEntity> getPlants() {
-        return new HashSet<>(plantEntitySet);
-    }
+
 
     @Override
     public void buildPlant(String filePath) throws PlantException {
