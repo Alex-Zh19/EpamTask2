@@ -1,6 +1,5 @@
 package com.epam.task2.tag;
 
-import org.apache.logging.log4j.core.util.DummyNanoClock;
 
 public class Tag {
     public static final String PLANT = "plant";

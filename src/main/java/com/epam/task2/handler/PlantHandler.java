@@ -45,6 +45,7 @@ public class PlantHandler extends DefaultHandler {
                     }
                 } else {
                     plantEntity.setId(attrs.getValue(0));
+                    plantEntity.setOrigin(PlantOrigin.DEFAULT);
                 }
                 break;
             case Tag.VISUAL_PARAMETERS:

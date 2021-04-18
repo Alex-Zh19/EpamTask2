@@ -24,7 +24,6 @@ public class PlantStaxBuilder extends AbstractPlantBuilder {
 
     public PlantStaxBuilder() {
         inputFactory = XMLInputFactory.newInstance();
-        plantEntitySet = new HashSet<PlantEntity>();
     }
 
 
@@ -34,12 +33,11 @@ public class PlantStaxBuilder extends AbstractPlantBuilder {
         String name;
         try (FileInputStream inputStream = new FileInputStream(new File(filename))) {
             reader = inputFactory.createXMLStreamReader(inputStream);
-            // StAX parsing
             while (reader.hasNext()) {
                 int type = reader.next();
                 if (type == XMLStreamConstants.START_ELEMENT) {
                     name = reader.getLocalName();
-                    if (name.equals(Tag.NAME.toLowerCase())) {
+                    if (name.equals(Tag.PLANT)) {
                         PlantEntity plantEntity = buildPlantEntity(reader);
                         plantEntitySet.add(plantEntity);
                     }
@@ -55,9 +53,15 @@ public class PlantStaxBuilder extends AbstractPlantBuilder {
     private PlantEntity buildPlantEntity(XMLStreamReader reader)
             throws XMLStreamException {
         PlantEntity plantEntity = new PlantEntity();
-        plantEntity.setId(reader.getAttributeValue(null, "identifierName"));
+        plantEntity.setId(reader.getAttributeValue(null, Tag.ID));
         // null check
-        plantEntity.setOrigin(PlantOrigin.valueOf(reader.getAttributeValue(null, "origin")));
+        String origin=reader.getAttributeValue(null, Tag.ORIGIN);
+        if(origin==null){
+            plantEntity.setOrigin(PlantOrigin.DEFAULT);
+        }else{
+            plantEntity.setOrigin(PlantOrigin.valueOf(origin.toUpperCase()));
+        }
+
         StringBuilder name;
         while (reader.hasNext()) {
             int type = reader.next();
@@ -65,12 +69,12 @@ public class PlantStaxBuilder extends AbstractPlantBuilder {
                 case XMLStreamConstants.START_ELEMENT:
                     name = new StringBuilder(reader.getLocalName());
                     switch (Tag.findTag(name.toString())) {
-                        case "name" -> plantEntity.setName(getXMLText(reader));
-                        case "soil" -> plantEntity.setSoil(getXMLText(reader));
-                        case "planting-time" -> plantEntity.setPlantingTime(LocalDateTime.parse(getXMLText(reader)));
-                        case "visual-parameters"->plantEntity.setVisualParameter(getXmlVisualParameter(reader));
-                        case "growing-tips"->plantEntity.setGrowingTips(getXmlGrowingTips(reader));
-                        case "multiplying" -> plantEntity.setMultiplying(getXMLText(reader));
+                        case Tag.NAME -> plantEntity.setName(getXMLText(reader));
+                        case Tag.SOIL -> plantEntity.setSoil(getXMLText(reader));
+                        case Tag.PLANTING_TIME -> plantEntity.setPlantingTime(LocalDateTime.parse(getXMLText(reader)));
+                        case Tag.VISUAL_PARAMETERS->plantEntity.setVisualParameter(getXmlVisualParameter(reader));
+                        case Tag.GROWING_TIPS->plantEntity.setGrowingTips(getXmlGrowingTips(reader));
+                        case Tag.MULTIPLYING -> plantEntity.setMultiplying(getXMLText(reader));
                     }
                     break;
                 case XMLStreamConstants.END_ELEMENT:
@@ -94,9 +98,9 @@ public class PlantStaxBuilder extends AbstractPlantBuilder {
                 case XMLStreamConstants.START_ELEMENT:
                     name =new StringBuilder(reader.getLocalName());
                     switch (Tag.findTag(name.toString())) {
-                        case "stem-color" -> visualParameter.setStemColor(getXMLText(reader));
-                        case "leaves-color" -> visualParameter.setLeavesColor(getXMLText(reader));
-                        case "average-size-of-plant" -> visualParameter.setAverageSizeOfPlant(getXMLText(reader));
+                        case Tag.STEM_COLOR -> visualParameter.setStemColor(getXMLText(reader));
+                        case Tag.LEAVES_COLOR -> visualParameter.setLeavesColor(getXMLText(reader));
+                        case Tag.AVERAGE_SIZE_OF_PLANT -> visualParameter.setAverageSizeOfPlant(getXMLText(reader));
                     }
                     break;
                 case XMLStreamConstants.END_ELEMENT:
@@ -120,9 +124,9 @@ public class PlantStaxBuilder extends AbstractPlantBuilder {
                 case XMLStreamConstants.START_ELEMENT:
                     name =new StringBuilder(reader.getLocalName());
                     switch (Tag.findTag(name.toString())) {
-                        case "temperature" -> growingTips.setTemperature(Integer.parseInt( getXMLText(reader)));
-                        case "lightning" -> growingTips.setLightning(getXMLText(reader));
-                        case "watering" -> growingTips.setWatering(Integer.parseInt(getXMLText(reader)));
+                        case Tag.TEMPERATURE -> growingTips.setTemperature(Integer.parseInt( getXMLText(reader)));
+                        case Tag.LIGHTNING -> growingTips.setLightning(getXMLText(reader));
+                        case Tag.WATERING -> growingTips.setWatering(Integer.parseInt(getXMLText(reader)));
                     }
                     break;
                 case XMLStreamConstants.END_ELEMENT:

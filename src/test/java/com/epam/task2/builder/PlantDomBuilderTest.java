@@ -22,9 +22,6 @@ public class PlantDomBuilderTest {
         URL pathToFileUrl = classLoader.getResource(pth);
         plantDomBuilder.buildPlant(new File(pathToFileUrl.getFile()).getAbsolutePath());
         Set<PlantEntity> setActual= plantDomBuilder.getPlants();
-        for(PlantEntity plant:setActual){
-            System.out.println(plant);
-        }
-
+        assertEquals(setActual.size(),16);
     }
 }
