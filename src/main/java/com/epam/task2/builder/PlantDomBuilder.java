@@ -43,7 +43,7 @@ public class PlantDomBuilder extends AbstractPlantBuilder {
         try {
             doc = docBuilder.parse(filePath);
             Element root = doc.getDocumentElement();
-            NodeList plantList = root.getElementsByTagName("flower");
+            NodeList plantList = root.getElementsByTagName("greenhouse");
             for (int i = 0; i < plantList.getLength(); i++) {
                 Element plantElement = (Element) plantList.item(i);
                 PlantEntity plantEntity = buildPlantEntity(plantElement);

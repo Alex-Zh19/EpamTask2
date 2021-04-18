@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<flower>
+<greenhouse
+xmlns="http://www.github.com/setevoybog/Task2"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.github.com/setevoybog/Task2 MedsShemaXMLS.xsd "
+>
     <plant identifierName="snflwr1" origin="Belarus"><!--1-->
         <name>Sunflower</name>
         <soil>unpaved</soil>
@@ -273,4 +277,4 @@
         <multiplying>seeds</multiplying><!--cuttings/leaves/seeds-->
     </plant>
 
-</flower>
+</greenhouse>
