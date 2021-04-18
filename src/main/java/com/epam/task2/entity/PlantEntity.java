@@ -95,7 +95,7 @@ public class PlantEntity {
         int buff=19;
         int result=10;
         result=buff*result+id.hashCode();
-        result=buff*result+origin.hashCode();
+        result=buff*result+ origin.hashCode();
         result=buff*result+name.hashCode();
         result=buff*result+soil.hashCode();
         result=buff*result+plantingTime.hashCode();
@@ -107,15 +107,10 @@ public class PlantEntity {
 
     @Override
     public String toString() {
-        return "PlantEntity{" +
-                "id='" + id  +
-                ", origin=" + origin.toString() +
-                ", name='" + name  +
-                ", soil='" + soil  +
-                ", plantingTime=" + plantingTime +
-                ", visualParameter=" + visualParameter +
-                ", growingTips=" + growingTips +
-                ", multiplying='" + multiplying +
-                '}';
+        StringBuilder result=new StringBuilder( "PlantEntity{ id=").append(id).append(", origin=").append(origin).
+                append(", name=").append(name).append(", soil=").append(soil).append( ", plantingTime=").
+                append(plantingTime).append( ", visualParameter=").append(visualParameter).append( ", growingTips=").
+                append(growingTips).append(", multiplying=").append(multiplying).append('}');
+        return result.toString();
     }
 }

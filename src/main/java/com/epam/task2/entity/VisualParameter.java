@@ -52,10 +52,8 @@ public class VisualParameter {
 
     @Override
     public String toString() {
-        return "VisualParameter{" +
-                "stemColor='" + stemColor +
-                ", leavesColor='" + leavesColor +
-                ", averageSizeOfPlant='" + averageSizeOfPlant +
-                '}';
+        StringBuilder result = new StringBuilder("VisualParameter{ stemColor=").append(stemColor).append(", leavesColor=").
+                append(leavesColor).append(", averageSizeOfPlant=").append(averageSizeOfPlant).append('}');
+        return result.toString();
     }
 }

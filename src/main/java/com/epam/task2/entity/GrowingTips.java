@@ -5,7 +5,8 @@ public class GrowingTips {
     private String lightning;
     private int watering;
 
-    private final int DEFAULT_WATERING=10;
+    private final int DEFAULT_WATERING = 10;
+
     public int getTemperature() {
         return temperature;
     }
@@ -27,8 +28,8 @@ public class GrowingTips {
     }
 
     public void setWatering(int watering) {
-        if(watering<0){
-           this.watering=DEFAULT_WATERING;
+        if (watering < 0) {
+            this.watering = DEFAULT_WATERING;
         }
         this.watering = watering;
     }
@@ -45,18 +46,16 @@ public class GrowingTips {
 
     @Override
     public int hashCode() {
-        int buff=19;
-        int result=10;
-        result=buff*result+lightning.hashCode()+temperature+watering;
+        int buff = 19;
+        int result = 10;
+        result = buff * result + lightning.hashCode() + temperature + watering;
         return result;
     }
 
     @Override
     public String toString() {
-        return "GrowingTips{" +
-                "temperature=" + temperature +
-                ", lightning='" + lightning +
-                ", watering=" + watering +
-                '}';
+        StringBuilder result = new StringBuilder("GrowingTips{ temperature=").append(temperature).
+                append(", lightning=").append(lightning).append(", watering=").append(watering).append('}');
+        return result.toString();
     }
 }

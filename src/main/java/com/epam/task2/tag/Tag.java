@@ -4,6 +4,8 @@ import org.apache.logging.log4j.core.util.DummyNanoClock;
 
 public class Tag {
     public static final String PLANT = "plant";
+    public static final String ID = "identifierName";
+    public static final String ORIGIN = "origin";
     public static final String NAME = "name";
     public static final String SOIL = "soil";
     public static final String PLANTING_TIME = "planting-time";

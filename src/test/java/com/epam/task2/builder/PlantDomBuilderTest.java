@@ -1,6 +1,7 @@
 package com.epam.task2.builder;
 
 import com.epam.task2.entity.PlantEntity;
+import com.epam.task2.entity.PlantOrigin;
 import com.epam.task2.exception.PlantException;
 import org.testng.annotations.Test;
 
@@ -21,7 +22,9 @@ public class PlantDomBuilderTest {
         URL pathToFileUrl = classLoader.getResource(pth);
         plantDomBuilder.buildPlant(new File(pathToFileUrl.getFile()).getAbsolutePath());
         Set<PlantEntity> setActual= plantDomBuilder.getPlants();
-        System.out.println(setActual.size());
+        for(PlantEntity plant:setActual){
+            System.out.println(plant);
+        }
 
     }
 }
