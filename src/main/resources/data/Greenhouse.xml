@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <greenhouse
-xmlns="http://www.github.com/setevoybog/Task2"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://www.github.com/setevoybog/Task2 MedsShemaXMLS.xsd "
->
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="https://github.com/Alex-Zh19/EpamTask2"
+        xsi:schemaLocation="https://github.com/Alex-Zh19/EpamTask2 GreenhouseTable.xsd"
+        >
+
     <plant identifierName="snflwr1" origin="Belarus"><!--1-->
         <name>Sunflower</name>
         <soil>unpaved</soil>
@@ -21,7 +22,7 @@ xsi:schemaLocation="http://www.github.com/setevoybog/Task2 MedsShemaXMLS.xsd "
         <multiplying>seeds</multiplying><!--cuttings/leaves/seeds-->
     </plant>
 
-    <plant identifierName="hcnth1" origin="USA"><!--2-->
+    <plant origin="USA" identifierName="hcnth1" ><!--2-->
         <name>Hyacinth</name>
         <soil>podzolic</soil>
         <planting-time>2011-07-01T00:00:02</planting-time>
@@ -38,10 +39,10 @@ xsi:schemaLocation="http://www.github.com/setevoybog/Task2 MedsShemaXMLS.xsd "
         <multiplying>cuttings</multiplying><!--cuttings/leaves/seeds-->
     </plant>
 
-   <plant identifierName="Astr1" origin="Russia"><!--3-->
+    <plant identifierName="Astr1" origin="Russia"><!--3-->
         <name>Aster</name>
         <soil>sod-podzolic</soil>
-       <planting-time>2011-07-01T00:00:03</planting-time>
+        <planting-time>2011-07-01T00:00:03</planting-time>
         <visual-parameters>
             <stem-color>yellow</stem-color>
             <leaves-color>green</leaves-color>

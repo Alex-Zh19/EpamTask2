@@ -20,7 +20,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class PlantStaxBuilder extends AbstractPlantBuilder {
-    private Set<PlantEntity> plantEntitySet;
     private XMLInputFactory inputFactory;
 
     public PlantStaxBuilder() {

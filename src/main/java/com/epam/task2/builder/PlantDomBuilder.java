@@ -21,7 +21,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class PlantDomBuilder extends AbstractPlantBuilder {
-    private Set<PlantEntity> plantEntitySet;
     private DocumentBuilder docBuilder;
 
     public PlantDomBuilder() throws PlantException {

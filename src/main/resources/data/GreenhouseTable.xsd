@@ -3,7 +3,7 @@
             xmlns="https://github.com/Alex-Zh19/EpamTask2"
             targetNamespace="https://github.com/Alex-Zh19/EpamTask2"
             elementFormDefault="qualified">
-    <xs:element name="flower" abstract="true">
+    <xs:element name="greenhouse">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="plant" type="Plant" minOccurs="16" maxOccurs="unbounded"/>
@@ -13,12 +13,12 @@
 
     <xs:complexType name="Plant">
         <xs:sequence>
-            <xs:element name="Name" type="Name-tns"/>
-            <xs:element name="Soil" type="xs:string"/>
-            <xs:element name="PlantingTime" type="xs:dateTime"/>
-            <xs:element name="VisualParameters" type="VisualParameters-tns"/>
-            <xs:element name="GrowingTips" type="GrowingTips-tns"/>
-            <xs:element name="Multiplying" type="xs:string"/>
+            <xs:element name="name" type="Name-tns"/>
+            <xs:element name="soil" type="xs:string"/>
+            <xs:element name="planting-time" type="xs:dateTime"/>
+            <xs:element name="visual-parameters" type="VisualParameters-tns"/>
+            <xs:element name="growing-tips" type="GrowingTips-tns"/>
+            <xs:element name="multiplying" type="xs:string"/>
         </xs:sequence>
         <xs:attribute name="identifierName" type="IdentifierName-tns" use="required"/>
         <xs:attribute name="origin" use="optional" default="DEFAULT">
@@ -43,15 +43,15 @@
 
     <xs:simpleType name="IdentifierName-tns">
         <xs:restriction base="xs:ID">
-            <xs:pattern value="\\w {2,20}"/>
+            <xs:pattern value="\w{2,20}"/>
         </xs:restriction>
     </xs:simpleType>
 
     <xs:complexType name="VisualParameters-tns">
         <xs:sequence>
-            <xs:element name="stemColor" type="xs:string"/>
-            <xs:element name="leavesColor" type="xs:string"/>
-            <xs:element name="averageSizeOfPlant" type="xs:string"/>
+            <xs:element name="stem-color" type="xs:string"/>
+            <xs:element name="leaves-color" type="xs:string"/>
+            <xs:element name="average-size-of-plant" type="xs:string"/>
         </xs:sequence>
     </xs:complexType>
 

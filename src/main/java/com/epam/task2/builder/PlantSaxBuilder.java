@@ -12,7 +12,6 @@ import javax.xml.parsers.SAXParserFactory;
 import java.io.IOException;
 
 public class PlantSaxBuilder extends AbstractPlantBuilder {
-
     private PlantHandler plantHandler;
     private XMLReader xmlReader;
 
