@@ -5,6 +5,8 @@ import com.epam.task2.entity.PlantEntity;
 import com.epam.task2.entity.PlantOrigin;
 import com.epam.task2.entity.VisualParameter;
 import com.epam.task2.exception.PlantException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 
 import java.io.File;

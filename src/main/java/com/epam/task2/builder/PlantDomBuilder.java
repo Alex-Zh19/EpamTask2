@@ -6,6 +6,9 @@ import com.epam.task2.entity.PlantOrigin;
 import com.epam.task2.entity.VisualParameter;
 import com.epam.task2.exception.PlantException;
 import com.epam.task2.tag.Tag;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -17,22 +20,20 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.time.LocalDateTime;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
 
 public class PlantDomBuilder extends AbstractPlantBuilder {
     private DocumentBuilder docBuilder;
+    private static final Logger logger = LogManager.getLogger();
 
     public PlantDomBuilder() throws PlantException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         try {
             docBuilder = factory.newDocumentBuilder();
         } catch (ParserConfigurationException e) {
+            logger.log(Level.ERROR, "Dom parsing exception", e);
             throw new PlantException("Dom Parsing exception", e);
         }
     }
-
 
 
     @Override
@@ -48,9 +49,11 @@ public class PlantDomBuilder extends AbstractPlantBuilder {
                 plantEntitySet.add(plantEntity);
             }
         } catch (IOException | SAXException e) {
+            logger.log(Level.ERROR, "Dom parsing exception", e);
             throw new PlantException("Dom Parsing exception", e);
         }
     }
+
     private PlantEntity buildPlantEntity(Element plantElement) {
         PlantEntity plantEntity = new PlantEntity();
         //id
@@ -59,12 +62,12 @@ public class PlantDomBuilder extends AbstractPlantBuilder {
         //origin
         StringBuilder originAttr=new StringBuilder(plantElement.getAttribute(Tag.ORIGIN));
         if(!originAttr.isEmpty()) {
-           plantEntity.setOrigin(PlantOrigin.valueOf(originAttr.toString().toUpperCase()));
+            plantEntity.setOrigin(PlantOrigin.valueOf(originAttr.toString().toUpperCase()));
         }else{
             plantEntity.setOrigin(PlantOrigin.DEFAULT);
         }
         //name
-        plantEntity.setName(getElementTextContent(plantElement,Tag.NAME));
+        plantEntity.setName(getElementTextContent(plantElement, Tag.NAME));
         //soil
         plantEntity.setSoil(getElementTextContent(plantElement, Tag.SOIL));
         //planting time
@@ -80,16 +83,17 @@ public class PlantDomBuilder extends AbstractPlantBuilder {
         visualParameter.setAverageSizeOfPlant(getElementTextContent(visualParameterElement, Tag.AVERAGE_SIZE_OF_PLANT));
         plantEntity.setVisualParameter(visualParameter);
         //growing tips
-        GrowingTips growingTips=new GrowingTips();
-        Element growingTipsElement=(Element)plantElement.getElementsByTagName(Tag.GROWING_TIPS).item(0);
+        GrowingTips growingTips = new GrowingTips();
+        Element growingTipsElement = (Element) plantElement.getElementsByTagName(Tag.GROWING_TIPS).item(0);
         growingTips.setTemperature(Integer.parseInt(getElementTextContent(growingTipsElement, Tag.TEMPERATURE)));
-        growingTips.setLightning(getElementTextContent(growingTipsElement,Tag.LIGHTNING));
+        growingTips.setLightning(getElementTextContent(growingTipsElement, Tag.LIGHTNING));
         growingTips.setWatering(Integer.parseInt(getElementTextContent(growingTipsElement, Tag.WATERING)));
         plantEntity.setGrowingTips(growingTips);
         //multiplying
         plantEntity.setMultiplying(getElementTextContent(plantElement, Tag.MULTIPLYING));
         return plantEntity;
     }
+
     // get the text content of the tag
     private static String getElementTextContent(Element element, String elementName) {
         NodeList nList = element.getElementsByTagName(elementName);

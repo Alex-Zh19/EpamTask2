@@ -25,6 +25,7 @@ public class PlantStaxBuilderTest {
         plantStaxBuilder.buildPlant(new File(pathToFileUrl.getFile()).getAbsolutePath());
         Set<PlantEntity> setActual= plantStaxBuilder.getPlants();
 
+
         PlantEntity oneOfThePlants=new PlantEntity();
         oneOfThePlants.setId("hcnth1");
         oneOfThePlants.setOrigin(PlantOrigin.USA);

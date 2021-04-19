@@ -6,6 +6,9 @@ import com.epam.task2.entity.PlantOrigin;
 import com.epam.task2.entity.VisualParameter;
 import com.epam.task2.exception.PlantException;
 import com.epam.task2.tag.Tag;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
@@ -16,11 +19,11 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.LocalDateTime;
-import java.util.HashSet;
-import java.util.Set;
+
 
 public class PlantStaxBuilder extends AbstractPlantBuilder {
     private XMLInputFactory inputFactory;
+    private static final Logger logger= LogManager.getLogger();
 
     public PlantStaxBuilder() {
         inputFactory = XMLInputFactory.newInstance();
@@ -44,8 +47,10 @@ public class PlantStaxBuilder extends AbstractPlantBuilder {
                 }
             }
         } catch (XMLStreamException | FileNotFoundException e) {
+            logger.log(Level.ERROR,"XML stream Exception", e);
             throw new PlantException("XML stream Exception", e);
         } catch (IOException e) {
+            logger.log(Level.ERROR,"Stax parsing exception", e);
             throw new PlantException("Stax parsing exception", e);
         }
     }
@@ -54,7 +59,6 @@ public class PlantStaxBuilder extends AbstractPlantBuilder {
             throws XMLStreamException {
         PlantEntity plantEntity = new PlantEntity();
         plantEntity.setId(reader.getAttributeValue(null, Tag.ID));
-        // null check
         String origin=reader.getAttributeValue(null, Tag.ORIGIN);
         if(origin==null){
             plantEntity.setOrigin(PlantOrigin.DEFAULT);
@@ -84,7 +88,8 @@ public class PlantStaxBuilder extends AbstractPlantBuilder {
                     }
             }
         }
-        throw new XMLStreamException("Unknown element in tag <student>");
+        logger.log(Level.ERROR,"Unknown element in tag <plant>");
+        throw new XMLStreamException("Unknown element in tag <plant>");
     }
 
     private VisualParameter getXmlVisualParameter(XMLStreamReader reader)
@@ -110,7 +115,8 @@ public class PlantStaxBuilder extends AbstractPlantBuilder {
                     }
             }
         }
-        throw new XMLStreamException("Unknown element in tag <address>");
+        logger.log(Level.ERROR,"Unknown element in tag <visual-parameter>");
+        throw new XMLStreamException("Unknown element in tag <visual-parameter>");
     }
 
     private GrowingTips getXmlGrowingTips(XMLStreamReader reader)
@@ -136,7 +142,8 @@ public class PlantStaxBuilder extends AbstractPlantBuilder {
                     }
             }
         }
-        throw new XMLStreamException("Unknown element in tag <address>");
+        logger.log(Level.ERROR,"Unknown element in tag <growing-tips>");
+        throw new XMLStreamException("Unknown element in tag <growing-tips>");
     }
 
 

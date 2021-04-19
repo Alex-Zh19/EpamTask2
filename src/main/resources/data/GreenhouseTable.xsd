@@ -28,6 +28,7 @@
                     <xs:enumeration value="Russia"/>
                     <xs:enumeration value="China"/>
                     <xs:enumeration value="USA"/>
+                    <xs:enumeration value="DEFAULT"/>
                 </xs:restriction>
             </xs:simpleType>
         </xs:attribute>
@@ -62,5 +63,5 @@
             <xs:element name="watering" type="xs:positiveInteger"/>
         </xs:sequence>
     </xs:complexType>
-    <xs:element name="plant" substitutionGroup="flower"/>
+    <xs:element name="plant" substitutionGroup="greenhouse"/>
 </xs:schema>

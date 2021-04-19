@@ -45,6 +45,9 @@ public class PlantDomBuilderTest {
         growingTips.setWatering(45);
         oneOfThePlants.setGrowingTips(growingTips);
         oneOfThePlants.setMultiplying("cuttings");
+
+
+
         assertTrue(setActual.contains(oneOfThePlants));
 
     }
